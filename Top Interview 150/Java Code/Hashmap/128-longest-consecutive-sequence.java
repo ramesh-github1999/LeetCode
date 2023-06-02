@@ -1,5 +1,3 @@
-//Time :O(n)
-//Space:O(n)
 class Solution {
     public int longestConsecutive(int[] nums) {
         if(nums.length==0) return 0;
