@@ -8,10 +8,10 @@ public:
             else if(st.top()=='(' && s[i]==')') st.pop();
             else if(st.top()=='{' && s[i]=='}') st.pop();
             else if(st.top()=='[' && s[i]==']') st.pop();
-            else st.push(s[i]);
+            else return false;
 
             
         }
-        return st.size()==0? true:false;
+        return st.size()==0;
     }
 };
