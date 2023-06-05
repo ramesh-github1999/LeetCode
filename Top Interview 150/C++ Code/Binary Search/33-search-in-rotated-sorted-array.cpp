@@ -36,5 +36,3 @@ public:
         else return binarySearch(nums,k+1,n-1,target);        
     }
 };
-// 0 4
-//3 7
