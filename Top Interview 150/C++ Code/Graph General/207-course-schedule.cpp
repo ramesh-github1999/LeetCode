@@ -1,3 +1,5 @@
+ // topological sort code 
+ // check cycle in Directed graph
 class Solution {
 public:
     bool canFinish(int n, vector<vector<int>>& v) {
