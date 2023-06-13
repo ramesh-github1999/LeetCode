@@ -1,3 +1,5 @@
+ // topological sort code 
+ // check cycle in Directed graph
 class Solution {
     public boolean canFinish(int n, int[][] v) {
         List<List<Integer>>graph=new ArrayList<>();
