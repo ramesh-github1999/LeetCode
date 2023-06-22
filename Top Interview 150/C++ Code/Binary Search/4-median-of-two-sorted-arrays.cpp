@@ -33,6 +33,40 @@ public:
 
 class Solution {
 public:
+    // Time :O(m+n)
+    // Space:o(1)
+    
+    int p1=0,p2=0;
+    int getMin(vector<int>&nums1,vector<int>&nums2){
+        if(p1<nums1.size() && p2<nums2.size())
+            return nums1[p1]<nums2[p2]?nums1[p1++]:nums2[p2++];
+        else if(p1<nums1.size())
+            return nums1[p1++];
+        else if(p2<nums2.size()) return nums2[p2++];
+        return -1;
+    }
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        int m=nums1.size(),n=nums2.size();
+        if((m+n)%2!=0){
+            for(int i=0;i<(m+n)/2;i++)
+                int temp=getMin(nums1,nums2);
+            return getMin(nums1,nums2);
+        }
+        else{
+            for(int i=0;i<(m+n)/2-1;i++)
+                int temp=getMin(nums1,nums2);
+            return (double)(getMin(nums1,nums2)+getMin(nums1,nums2))/2;
+            
+        }
+        return 0.0;
+    }
+};
+
+
+//Time: O(log(m+n))
+// Space:O(1)
+class Solution {
+public:
     // pepcoding solution 
     double findMedianSortedArrays(vector<int>& a, vector<int>& b) {
         if(a.size()>b.size()){
